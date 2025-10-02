@@ -1,37 +1,18 @@
-import { useState } from "react";
+import { Routes, Route } from "react-router";
+import MainLayout from "./pages/MainLayout";
 import "./App.css";
-import Header from "./components/Header";
+import Home from "./pages/Home";
+import DiaryAddNew from "./components/DiaryAddNew";
 
-function App() {
-  /*
-  const testdaten = [
-    { id: 1, date: "01.09.2025", message: "Text vom 01.09.2025" },
-    { id: 2, date: "02.09.2025", message: "Text vom 02.09.2025" },
-    { id: 3, date: "03.09.2025", message: "Text vom 03.09.2025" },
-    { id: 4, date: "04.09.2025", message: "Text vom 04.09.2025" },
-  ];
-
-  function initData() {
-    console.log("initData");
-    localStorage.setItem("PersonalDiary", JSON.stringify(testdaten));
-  }
-
-  initData();
-  */
-
+const App = () => {
   return (
-    <>
-      <div className="">
-        <Header />
-        <div className="">
-          <button onClick="alert(Click)}" className="">
-            Add new entry
-          </button>
-        </div>
-        <div className="card"></div>
-      </div>
-    </>
+    <Routes>
+      <Route path="/" element={<MainLayout />}>
+        <Route index element={<Home />} />
+        <Route path="/addNew" element={<DiaryAddNew />} />
+      </Route>
+    </Routes>
   );
-}
+};
 
 export default App;

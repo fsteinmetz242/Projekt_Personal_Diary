@@ -1,9 +1,9 @@
+import DiaryNavBar from "./NavBar";
+
 const Header = () => {
   return (
     <header>
-      <div className="">
-        <h1 className="">Personal Diary</h1>
-      </div>
+      <DiaryNavBar />
     </header>
   );
 };
