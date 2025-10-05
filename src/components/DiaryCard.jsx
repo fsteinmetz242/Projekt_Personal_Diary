@@ -17,9 +17,13 @@ const DiaryCard = ({ diaryDayData }) => {
       onClick={() => setShowDiaryDetails(!showDiaryDetails)}
     >
       <figure>
-        <img src={diaryDayData.EntryImage} alt="" />
+        <img
+          src={diaryDayData.EntryImage}
+          alt=""
+          className="object-contain w-full rounded"
+        />
       </figure>
-      <div className="card-body">
+      <div className="card-body ">
         <h2 className="card-title">{diaryDayData.EntryTitle}</h2>
         <h3>{diaryDayData.EntryDate}</h3>
         <p> {diaryDayData.EntryText}</p>
