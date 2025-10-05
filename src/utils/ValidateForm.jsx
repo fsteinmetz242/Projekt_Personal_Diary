@@ -21,7 +21,8 @@ const ValidateForm = async ({
         (oneDay.EntryDate !== undefined) | null &&
         oneDay.EntryDate === EntryDate
       ) {
-        validationErrors.duplicate = "There is always an entry existing.";
+        validationErrors.duplicate =
+          "There is an entry. Please come back tomorrow.";
       }
     });
   }
