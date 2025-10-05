@@ -1,33 +1,15 @@
 import { useOutletContext } from "react-router";
-import { useLocation } from "react-router";
-
 import DiaryCard from "./DiaryCard";
 
 const DiaryCardsList = () => {
   const { diary, setDiary } = useOutletContext();
 
-  const Location = useLocation();
-  const addNewLink = document.getElementById("addNew");
-
-  console.log("Pfad: ", location.pathname, "   addNewLink: ", addNewLink);
-
-  if (addNewLink) {
-    if (location.pathname === "/addNew") {
-      console.log("disable");
-      //      addNewLink.disabled = true;
-      addNewLink.setAttribute("disabled", true);
-    } else {
-      console.log("enable");
-      //      addNewLink.disabled = false;
-      addNewLink.removeAttribute("disabled");
-    }
-  }
-
   const createCards = () => {
     if (!diary) {
-      console.log("Nix!!");
+      console.log("Keine Daten!!");
     } else {
       // {key={element.id} DiaryText={element.message}
+      diary.sort(() => {});
       return diary.map((element) => (
         <DiaryCard key={element.id} DiaryText={element.message} />
       ));
