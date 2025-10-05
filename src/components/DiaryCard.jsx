@@ -13,7 +13,7 @@ const DiaryCard = ({ diaryDayData }) => {
 
   return (
     <div
-      className="card bg-base-100 w-96 shadow-sm"
+      className="card bg-base-100 w-64 shadow-sm"
       onClick={() => setShowDiaryDetails(!showDiaryDetails)}
     >
       <figure>

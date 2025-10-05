@@ -13,7 +13,7 @@ const DiaryDetailsModal = ({
       id={diaryDayData.id}
       className="modal transition ease-in-out duration-400"
     >
-      <div className="modal-box flex flex-col  px-5 ">
+      <div className="modal-box flex flex-col w-64 px-5 ">
         <button
           className="btn btn-sm btn-ghost absolute right-2 top-2"
           onClick={(event) => closeModal(event)}
